@@ -4,18 +4,17 @@ import AOS from "aos";
 export default function About() {
   AOS.init();
   return (
-    <Box backgroundColor={"#F3F0CF"} w={"100%"} >
+    <Box backgroundColor={"#F3F0CF"} w={"100%"}>
       <Box
         display="flex"
-        margin={"auto"}
-        justifyContent={"center"}
-        p={5}
-        color={"white"}
-        backgroundColor={"#d12881"}
-        w={"20%"}
-        borderRadius={"60%"}
-        transform={"rotate(10deg)"}
-
+        margin="auto"
+        justifyContent="center"
+        p={{ base: 3, md: 5 }}
+        color="white"
+        backgroundColor="#d12881"
+        w={{ base: "90%", md: "20%" }}
+        borderRadius={{ base: "0 50px 0 50px", md: "60%" }}
+        transform={{ base: "rotate(10deg)", md: "rotate(10deg)" }}
       >
         <Heading fontFamily={"cursive"}>About Us</Heading>
       </Box>

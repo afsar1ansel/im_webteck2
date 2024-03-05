@@ -4,17 +4,17 @@ import AOS from "aos";
 export default function Contact(){
     AOS.init();
     return (
-      <Box backgroundColor={"#F3F0CF"} p={5}>
+      <Box className="contact" backgroundColor={"#F3F0CF"} p={5}>
         <Box
           display="flex"
-          margin={"auto"}
-          justifyContent={"center"}
-          p={5}
-          color={"white"}
-          backgroundColor={"#d12881"}
-          w={"20%"}
-          borderRadius={"60%"}
-          transform={"rotate(10deg)"}
+          margin="auto"
+          justifyContent="center"
+          p={{ base: 3, md: 5 }} 
+          color="white"
+          backgroundColor="#d12881"
+          w={{ base: "90%", md: "20%" }} 
+          borderRadius={{ base: "0 50px 0 50px", md: "60%" }} 
+          transform={{ base: "rotate(10deg)", md: "rotate(10deg)" }}
         >
           <Heading m={2} fontFamily={"cursive"}>
             Contact Us
@@ -33,7 +33,7 @@ export default function Contact(){
             display={"flex"}
             flexDirection={"column"}
             p={5}
-            w={"40%"}
+            w={{ base: "90%", md: "40%" }}
             justifyContent={"center"}
             m={"auto"}
           >
@@ -54,12 +54,13 @@ export default function Contact(){
           <Box
             data-aos="fade-down"
             data-aos-easing="linear"
-            data-aos-duration="1500"
+            data-aos-duration="1000"
             display={"flex"}
             flexDirection={"column"}
             // border={"1px solid black"}
             p={5}
-            w={"40%"}
+            w={{ base: "90%", md: "40%" }}
+            justifyContent={"center"}
             m={"auto"}
             boxShadow=" rgba(0, 0, 0, 0.04) 0px 3px 5px"
             borderRadius={"10px"}
@@ -116,7 +117,7 @@ export default function Contact(){
               />
               <Input
                 backgroundColor={"#d12881"}
-                w={"30%"}
+                w={{ base: "100%", md: "40%" }}
                 m={"auto"}
                 color={"white"}
                 borderRadius={"10px 20px 10px 30px"}

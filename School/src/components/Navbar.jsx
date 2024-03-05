@@ -161,9 +161,19 @@ export default function Simple() {
                   About
                 </Box>
                 </Link>
+                <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                style={{ cursor: "pointer" }}
+                activeStyle={{ color: "#d12881" }}
+                >
                 <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
                   Contact
                 </Box>
+                </Link>
               </Flex>
               <Box
                 width={"25%"}
