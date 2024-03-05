@@ -48,7 +48,7 @@ const NavLink = (props) => {
 };
 
 export default function Simple() {
-    AOS.init();
+  AOS.init();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [scrollY, setScrollY] = useState(window.scrollY);
@@ -92,7 +92,7 @@ export default function Simple() {
             onClick={isOpen ? onClose : onOpen}
           />
 
-          <HStack spacing={8} alignItems={"center"} mt={1} width={"100%"}>
+          <HStack spacing={8} alignItems={"center"}  mt={1} width={"100%"}>
             <Box
               display={{ base: "flex", md: "none" }}
               justifyContent={"center"}
@@ -122,57 +122,57 @@ export default function Simple() {
                 display={scrollY > 0 ? "flex" : "none"}
               >
                 <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                offset={-50}
-                duration={500}
-                style={{ cursor: "pointer" }}
-                activeStyle={{ color: "red" }}
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeStyle={{ color: "red" }}
                 >
-                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
-                  Home
-                </Box>
+                  <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                    Home
+                  </Box>
                 </Link>
                 <Box _hover={{ color: "#d12881", cursor: "pointer" }}>Blog</Box>
-                <Link 
-                to="vision"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                style={{ cursor: "pointer" }}
-                activeStyle={{ color: "#d12881" }}
+                <Link
+                  to="vision"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeStyle={{ color: "#d12881" }}
                 >
-                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
-                  Vision
-                </Box>
+                  <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                    Vision
+                  </Box>
                 </Link>
                 <Link
-                to="Animation"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                style={{ cursor: "pointer" }}
-                activeStyle={{ color: "#d12881" }}
+                  to="Animation"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeStyle={{ color: "#d12881" }}
                 >
-                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
-                  About
-                </Box>
+                  <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                    About
+                  </Box>
                 </Link>
                 <Link
-                to="contact"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                style={{ cursor: "pointer" }}
-                activeStyle={{ color: "#d12881" }}
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  style={{ cursor: "pointer" }}
+                  activeStyle={{ color: "#d12881" }}
                 >
-                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
-                  Contact
-                </Box>
+                  <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                    Contact
+                  </Box>
                 </Link>
               </Flex>
               <Box
@@ -217,11 +217,59 @@ export default function Simple() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
+          <Box pb={4} p={4} display={{ md: "none" }} backgroundColor={"#EC9600"} width={"100%"} >
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+                style={{ cursor: "pointer" }}
+                activeStyle={{ color: "red" }}
+              >
+                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>Home</Box>
+              </Link>
+              <Box _hover={{ color: "#d12881", cursor: "pointer" }}>Blog</Box>
+              <Link
+                to="vision"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                style={{ cursor: "pointer" }}
+                activeStyle={{ color: "#d12881" }}
+              >
+                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                  Vision
+                </Box>
+              </Link>
+              <Link
+                to="Animation"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                style={{ cursor: "pointer" }}
+                activeStyle={{ color: "#d12881" }}
+              >
+                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                  About
+                </Box>
+              </Link>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                style={{ cursor: "pointer" }}
+                activeStyle={{ color: "#d12881" }}
+              >
+                <Box _hover={{ color: "#d12881", cursor: "pointer" }}>
+                  Contact
+                </Box>
+              </Link>
             </Stack>
           </Box>
         ) : null}
